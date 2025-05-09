@@ -1,0 +1,407 @@
+
+body {
+background: radial-gradient(#1a1a1a 0%, #000000 100%);
+color: white;
+height: 100%;
+margin: 0;
+padding-top: 76px;
+}
+/* Custom styles for the navbar */
+.navbar-custom {
+background-color: #000 !important;
+border-bottom: 1px solid #ffffff;
+position: fixed; /* Change from relative to fixed */
+top: 0; /* Position at the top of the viewport */
+width: 100%; /* Make it full width */
+z-index: 1030; /* Higher z-index to ensure it stays above other content */
+}
+
+.navbar-custom .navbar-brand {
+margin-right: 2rem;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+color: #fff;
+margin: 0 10px;
+transition: color 0.3s, transform 0.2s;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+color: #ff6b00;
+transform: translateY(0);
+}
+
+.navbar-custom .navbar-nav .nav-link.active {
+color: #ff6b00;
+font-weight: bold;
+}
+
+.navbar-custom .dropdown-menu {
+background-color: #222;
+border: none;
+}
+
+.navbar-custom .dropdown-item {
+color: #fff;
+}
+
+.navbar-custom .dropdown-item:hover {
+background-color: #333;
+color: #ff6b00;
+}
+
+.btn-sign-in {
+background-color: transparent;
+border: 1px solid #ffffff;
+color: #ffffff;
+transition: all 0.3s;
+}
+
+.btn-sign-in:hover {
+background-color: #ffffff;
+color: #000;
+transform: scale(1);
+}
+
+/* Make sure the toggler icon is visible against black background */
+.navbar-custom .navbar-toggler-icon {
+background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-custom .navbar-toggler {
+border-color: rgba(255, 255, 255, 0.1);
+}
+
+.center-nav {
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+}
+@media (max-width: 992px) {
+.center-nav {
+  position: relative;
+  left: 0;
+  transform: none;
+}
+}
+/* End Custom styles for the navbar */
+
+/* Profile settings styles */
+.profile-container {
+display: flex;
+min-height: calc(100vh - 76px);
+margin-top: 0;
+}
+.sidebar {
+width: 250px;
+background-color: #1a1a1a;
+border-right: 1px solid rgba(255, 255, 255, 0.1);
+/*padding: 10px 0;*/
+position: sticky;
+top: 76px; /* Make sure this matches the navbar height */
+height: calc(100vh - 76px);
+overflow-y: auto;
+margin-top: 0; /* Add this to ensure no extra margin */
+}
+
+
+.content-area {
+flex: 1;
+padding: 30px;
+overflow-y: auto;
+}
+
+.sidebar-item {
+display: flex;
+align-items: center;
+padding: 15px 20px;
+color: #ffffff;
+text-decoration: none;
+transition: all 0.3s ease;
+border-left: 3px solid transparent;
+}
+
+.sidebar-item.active {
+background-color: rgba(255, 107, 0, 0.1);
+border-left: 3px solid #ff6b00;
+}
+
+.sidebar-item:hover {
+background-color: rgba(255, 255, 255, 0.05);
+color: #ff6b00;
+}
+
+.sidebar-icon {
+width: 20px;
+height: 20px;
+margin-right: 10px;
+}
+
+.section-title {
+font-size: 1.8rem;
+font-weight: 600;
+margin-bottom: 20px;
+padding-bottom: 10px;
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-description {
+color: #aaa;
+margin-bottom: 30px;
+}
+
+.form-control {
+background-color: rgba(255, 255, 255, 0.05);
+border: 1px solid rgba(255, 255, 255, 0.1);
+color: #ffffff;
+border-radius: 5px;
+padding: 10px 15px;
+}
+
+.form-control:focus {
+background-color: rgba(255, 255, 255, 0.1);
+border-color: #ff6b00;
+color: #ffffff;
+box-shadow: 0 0 0 0.2rem rgba(255, 107, 0, 0.25);
+}
+
+.form-label {
+color: #aaa;
+margin-bottom: 5px;
+}
+
+.btn-primary {
+background-color: #ff6b00;
+border-color: #ff6b00;
+color: #ffffff;
+padding: 10px 20px;
+transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+background-color: #e06000;
+border-color: #e06000;
+transform: translateY(-2px);
+box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+}
+
+.btn-danger {
+background-color: #dc3545;
+border-color: #dc3545;
+color: #ffffff;
+padding: 10px 20px;
+transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+background-color: #c82333;
+border-color: #bd2130;
+transform: translateY(-2px);
+box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+}
+
+.form-switch .form-check-input {
+width: 45px;
+height: 22px;
+}
+
+.form-switch .form-check-input:checked {
+background-color: #ff6b00;
+border-color: #ff6b00;
+}
+
+.card {
+background-color: rgba(26, 26, 26, 0.5);
+border: 1px solid rgba(255, 255, 255, 0.1);
+border-radius: 10px;
+padding: 20px;
+margin-bottom: 30px;
+}
+
+.status-indicator {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+display: inline-block;
+margin-right: 5px;
+}
+
+.status-online {
+background-color: #28a745;
+}
+
+.username-display {
+font-size: 1.1rem;
+color: #aaa;
+margin-bottom: 5px;
+}
+
+.username-value {
+font-size: 1.4rem;
+font-weight: 600;
+color: #ffffff;
+}
+
+/* Ensure content sections are displayed and have proper spacing */
+.content-section {
+padding-top: 20px;
+margin-bottom: 50px;
+display: block; /* Always display sections */
+}
+
+/* Alert styling */
+.alert {
+border-radius: 5px;
+padding: 15px;
+margin-bottom: 20px;
+}
+
+.alert-success {
+background-color: rgba(40, 167, 69, 0.2);
+border: 1px solid rgba(40, 167, 69, 0.3);
+color: #75b798;
+}
+
+.alert-danger {
+background-color: rgba(220, 53, 69, 0.2);
+border: 1px solid rgba(220, 53, 69, 0.3);
+color: #ea868f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+.profile-container {
+    flex-direction: column;
+}
+
+.sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 0;
+    position: sticky;
+    top: 56px; /* Smaller navbar height on mobile */
+    height: auto;
+    z-index: 1000;
+}
+
+.sidebar-nav {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.sidebar-item {
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+.sidebar-item.active {
+    border-left: none;
+    border-bottom: 3px solid #ff6b00;
+}
+}
+
+@media (max-width: 576px) {
+.content-area {
+    padding: 20px 15px;
+}
+}
+
+/* 2FA and verification styles */
+.verification-section {
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.verification-icon {
+width: 40px;
+height: 40px;
+margin-right: 20px;
+}
+
+.verification-info {
+flex: 1;
+}
+
+.verification-title {
+font-size: 1.2rem;
+margin-bottom: 5px;
+}
+
+.verification-description {
+color: #aaa;
+font-size: 0.9rem;
+}
+
+/* Loading spinner */
+.spinner-border {
+width: 20px;
+height: 20px;
+margin-right: 10px;
+}
+
+.logo-container {
+text-align: center;
+margin-top: 20px;
+}
+
+.logo-img {
+max-width: 200px;
+opacity: 0.8;
+}
+/* Toast notification styles */
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1000;
+    max-width: 350px;
+}
+
+.toast-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast-notification.error {
+    background-color: #f44336;
+}
+
+.toast-notification .icon {
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+.toast-notification .message {
+    flex-grow: 1;
+    font-weight: 500;
+}
+
+.toast-notification .close-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    margin-left: 12px;
+    opacity: 0.8;
+}
+
+.toast-notification .close-btn:hover {
+    opacity: 1;
+}

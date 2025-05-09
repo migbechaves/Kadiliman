@@ -1,0 +1,332 @@
+body {
+        background: radial-gradient(#1a1a1a 0%, #000000 100%);
+        color: white;
+        height: 100%;
+        margin: 0;
+        padding-top: 67px;
+    }
+    .navbar-custom {
+        background-color: #000 !important;
+        border-bottom: 1px solid #ffffff;
+        position: fixed; /* Change from relative to fixed */
+        top: 0; /* Position at the top of the viewport */
+        width: 100%; /* Make it full width */
+        z-index: 1030; /* Higher z-index to ensure it stays above other content */
+    }
+      
+      .navbar-custom .navbar-brand {
+        margin-right: 2rem;
+      }
+      
+      .navbar-custom .navbar-nav .nav-link {
+        color: #fff;
+        margin: 0 10px;
+        transition: color 0.3s;
+        font-family: 'Titillium Web', sans-serif;
+        text-transform: none;
+      }
+      
+      .navbar-custom .navbar-nav .nav-link:hover {
+        color: #ff6b00;
+      }
+      
+      .navbar-custom .navbar-nav .nav-link.active {
+        color: #ff6b00;
+      }
+      
+      .navbar-custom .dropdown-menu {
+        background-color: #222;
+        border: none;
+      }
+      
+      .navbar-custom .dropdown-item {
+        color: #fff;
+      }
+      
+      .navbar-custom .dropdown-item:hover {
+        background-color: #333;
+        color: #ff6b00;
+      }
+      
+      .btn-sign-in {
+        background-color: transparent;
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        transition: all 0.3s;
+      }
+      
+      .btn-sign-in:hover {
+        background-color: #ffffff;
+        color: #000;
+        transform: scale(1);
+      }
+      
+      /* Make sure the toggler icon is visible against black background */
+      .navbar-custom .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+      
+      .navbar-custom .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      .center-nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      /* End Custom styles for the navbar */
+      
+      /* Carousel height control */
+      .carousel-inner {
+        max-height: 350px; /* Adjust this value to your desired height */
+      }
+      
+      .carousel-inner img {
+        width: 100%;
+        height: 500px; /* Same as max-height above */
+        object-fit: cover; /* This will maintain aspect ratio while filling the space */
+        margin-top: 0px;
+      }
+      
+      @media (max-width: 992px) {
+        .center-nav {
+          position: relative;
+          left: 0;
+          transform: none;
+        }
+        
+        .ms-auto {
+          margin-top: 10px;
+        }
+        
+        /* Responsive carousel height */
+        .carousel-inner {
+          max-height: 300px; /* Smaller height on mobile devices */
+        }
+        
+        .carousel-inner img {
+          height: 300px;
+        }
+      }
+      /* features and bottom */
+      /* Custom width containers */
+    .bottom-container {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+    .card {
+    background-color: #252525;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    }
+
+    .btn-custom {
+        background-color: #000000;
+        color: #ffffff;
+        border: 1px solid #ffffff;
+        transition: all 0.3s ease;
+    }
+
+    .btn-custom:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+      .features-container {
+        width: 800px;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .feature-card {
+        background: #000000;
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+        color: #ffffff;
+        height: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+    }
+
+    .feature-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    .see-more-button {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .see-more-link {
+        background: #000000;
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .see-more-link:hover {
+        background-color: #1a1a1a;
+        transform: scale(1.03);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        color: #ff6b00;
+    }
+    
+    .see-more-icon {
+        margin-left: 10px;
+    }
+    /* Card layout adjustments */
+    .card-row {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .card-col {
+        flex: 1;
+    }
+    /* Add this media query to make cards stack on mobile */
+    @media (max-width: 767px) {
+        .card-row {
+            flex-direction: column; /* Change to column layout on small screens */
+        }
+        
+        .card-col {
+            width: 100%; /* Take full width */
+            margin-bottom: 15px; /* Add spacing between stacked cards */
+        }
+    }
+    /* Clickable feature item styling */
+    .feature-item {
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    
+    .feature-item:hover {
+        background-color: #1a1a1a;
+        transform: translateX(5px);
+        color: #ff6b00;
+    }
+    
+    .feature-item:hover .feature-title {
+        color: #ff6b00;
+    }
+
+    /* Media queries for responsive design */
+    @media (max-width: 1040px) {
+        .bottom-container,
+        .features-container,
+        .carousel-container {
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+    /* end of features-------------------------------------------------------*/
+
+    /* Grid layout styles */
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+    
+    .feature-item-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px 10px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: rgba(26, 26, 26, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .feature-item-card:hover {
+        transform: translateY(-5px);
+        background-color: rgba(26, 26, 26, 0.8);
+        color: #ff6b00;
+        box-shadow: 0 5px 15px rgba(255, 107, 0, 0.2);
+        border-color: rgba(255, 107, 0, 0.3);
+    }
+    
+    .feature-icon-container {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        padding: 12px;
+    }
+    
+    .feature-icon {
+        width: 100%;
+        height: auto;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        color: #ffffff;
+        padding-left: 10px;
+        border-left: 3px solid #ff6b00;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .feature-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .feature-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        .feature-icon-container {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .feature-title {
+            font-size: 0.9rem;
+        }
+    }
+    /* Clickable feature item styling */
+    .feature-item {
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-radius: 8px;
+    }

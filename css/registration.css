@@ -1,0 +1,232 @@
+body {
+    background: radial-gradient(#1a1a1a 0%, #000000 100%);
+    color: white;
+    height: 100%;
+    margin: 0;
+    padding-top: 76px;
+}
+.navbar-custom {
+    background-color: #000 !important;
+    border-bottom: 1px solid #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+}
+  
+.navbar-custom .navbar-brand {
+    margin-right: 2rem;
+}
+  
+.navbar-custom .navbar-nav .nav-link {
+    color: #fff;
+    margin: 0 10px;
+    transition: color 0.3s, transform 0.2s;
+}
+  
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #ff6b00;
+    transform: translateY(0);
+}
+  
+.navbar-custom .navbar-nav .nav-link.active {
+    color: #ff6b00;
+    font-weight: bold;
+}
+  
+.navbar-custom .dropdown-menu {
+    background-color: #222;
+    border: none;
+}
+  
+.navbar-custom .dropdown-item {
+    color: #fff;
+}
+  
+.navbar-custom .dropdown-item:hover {
+    background-color: #333;
+    color: #ff6b00;
+}
+  
+.navbar-custom .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+  
+.navbar-custom .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+  
+.center-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@media (max-width: 992px) {
+    .center-nav {
+      position: relative;
+      left: 0;
+      transform: none;
+    }
+  }
+/* End Custom styles for the navbar */
+
+.login-container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+
+.tab-selector {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 15px 0;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab-btn.active {
+    background-color: #555;
+}
+
+.login-form-container {
+    display: flex;
+    width: 100%;
+}
+
+.form-section {
+    flex: 1;
+    padding: 10px 30px 40px 30px; /* Top, Right, Bottom, Left */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+}
+
+.name-row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.name-field {
+    flex: 1;
+}
+
+    .cafe-image {
+    flex: 1;
+    background-image: url('img/LOGO-removebg-preview.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+    margin: 20px;  /* Add margin around all sides */
+    border-radius: 5px;  /* Optional: adds rounded corners */
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: white;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.submit-btn {
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.submit-btn:hover {
+    background-color: #666;
+}
+
+.help-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.help-text a {
+    color: #999;
+    text-decoration: none;
+}
+
+.help-text a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .login-form-container {
+        flex-direction: column;
+    }
+    
+    .cafe-image {
+        min-height: 200px;
+    }
+    
+    .name-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Animation for error text */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    animation: fadeIn 0.3s ease, shake 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
